@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for polyfills.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">__root__/</a> polyfills.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.66% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>61/143</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.66% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/73</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">44.36% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>59/133</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253</td><td class="line-coverage quiet"><span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">24622×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">24622×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">288×</span>
+<span class="cline-any cline-yes">288×</span>
+<span class="cline-any cline-yes">288×</span>
+<span class="cline-any cline-yes">288×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">216×</span>
+<span class="cline-any cline-yes">216×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">72×</span>
+<span class="cline-any cline-yes">72×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var fs = require('./fs.js')
+var constants = require('constants')
+&nbsp;
+var origCwd = process.cwd
+var cwd = null
+process.cwd = function() {
+  if (!cwd)
+    cwd = origCwd.call(process)
+  return cwd
+}
+try {
+  process.cwd()
+} catch (er) {}
+&nbsp;
+var chdir = process.chdir
+process.chdir = function(d) {
+  cwd = null
+  chdir.call(process, d)
+}
+&nbsp;
+module.exports = patch
+&nbsp;
+function patch (fs) {
+  // (re-)implement some things that are known busted or missing.
+&nbsp;
+  // lchmod, broken prior to 0.6.2
+  // back-port the fix here.
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (constants.hasOwnProperty('O_SYMLINK') &amp;&amp;
+      process.version.match(/^v0\.6\.[0-2]|^v0\.5\./)) {
+<span class="cstat-no" title="statement not covered" >    patchLchmod(fs)</span>
+  }
+&nbsp;
+  // lutimes implementation, or no-op
+  if (!fs.lutimes) {
+    patchLutimes(fs)
+  }
+&nbsp;
+  // https://github.com/isaacs/node-graceful-fs/issues/4
+  // Chown should not fail on einval or eperm if non-root.
+  // It should not fail on enosys ever, as this just indicates
+  // that a fs doesn't support the intended operation.
+&nbsp;
+  fs.chown = chownFix(fs.chown)
+  fs.fchown = chownFix(fs.fchown)
+  fs.lchown = chownFix(fs.lchown)
+&nbsp;
+  fs.chmod = chownFix(fs.chmod)
+  fs.fchmod = chownFix(fs.fchmod)
+  fs.lchmod = chownFix(fs.lchmod)
+&nbsp;
+  fs.chownSync = chownFixSync(fs.chownSync)
+  fs.fchownSync = chownFixSync(fs.fchownSync)
+  fs.lchownSync = chownFixSync(fs.lchownSync)
+&nbsp;
+  fs.chmodSync = chownFix(fs.chmodSync)
+  fs.fchmodSync = chownFix(fs.fchmodSync)
+  fs.lchmodSync = chownFix(fs.lchmodSync)
+&nbsp;
+  // if lchmod/lchown do not exist, then make them no-ops
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!fs.lchmod) {
+<span class="cstat-no" title="statement not covered" >    fs.lchmod = <span class="fstat-no" title="function not covered" >function (path, mode, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >      process.nextTick(cb)</span>
+    }
+<span class="cstat-no" title="statement not covered" >    fs.lchmodSync = <span class="fstat-no" title="function not covered" >function () {</span>}</span>
+  }
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!fs.lchown) {
+<span class="cstat-no" title="statement not covered" >    fs.lchown = <span class="fstat-no" title="function not covered" >function (path, uid, gid, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >      process.nextTick(cb)</span>
+    }
+<span class="cstat-no" title="statement not covered" >    fs.lchownSync = <span class="fstat-no" title="function not covered" >function () {</span>}</span>
+  }
+&nbsp;
+  // on Windows, A/V software can lock the directory, causing this
+  // to fail with an EACCES or EPERM if the directory contains newly
+  // created files.  Try again on failure, for up to 1 second.
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (process.platform === "win32") {
+<span class="cstat-no" title="statement not covered" >    fs.rename = (<span class="fstat-no" title="function not covered" >function (fs$rename) {</span> <span class="cstat-no" title="statement not covered" >return <span class="fstat-no" title="function not covered" >function (from, to, cb) {</span></span></span>
+<span class="cstat-no" title="statement not covered" >      var start = Date.now()</span>
+<span class="cstat-no" title="statement not covered" >      fs$rename(from, to, <span class="fstat-no" title="function not covered" >function CB (er) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (er</span>
+            &amp;&amp; (er.code === "EACCES" || er.code === "EPERM")
+            &amp;&amp; Date.now() - start &lt; 1000) {
+<span class="cstat-no" title="statement not covered" >          return fs$rename(from, to, CB)</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (cb) <span class="cstat-no" title="statement not covered" >cb(er)</span></span>
+      })
+    }})(fs.rename)
+  }
+&nbsp;
+  // if read() returns EAGAIN, then just try it again.
+  fs.read = (function (fs$read) { return function (fd, buffer, offset, length, position, callback_) {
+    var callback
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (callback_ &amp;&amp; typeof callback_ === 'function') {
+      var eagCounter = 0
+      callback = function (er, _, __) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (er &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >er.code === 'EAGAIN' </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >eagCounter &lt; 10)</span> {
+<span class="cstat-no" title="statement not covered" >          eagCounter ++</span>
+<span class="cstat-no" title="statement not covered" >          return fs$read.call(fs, fd, buffer, offset, length, position, callback)</span>
+        }
+        callback_.apply(this, arguments)
+      }
+    }
+    return fs$read.call(fs, fd, buffer, offset, length, position, callback)
+  }})(fs.read)
+&nbsp;
+  fs.readSync = (function (fs$readSync) { return function (fd, buffer, offset, length, position) {
+    var eagCounter = 0
+    while (true) {
+      try {
+        return fs$readSync.call(fs, fd, buffer, offset, length, position)
+      } catch (er) {
+<span class="cstat-no" title="statement not covered" >        if (er.code === 'EAGAIN' &amp;&amp; eagCounter &lt; 10) {</span>
+<span class="cstat-no" title="statement not covered" >          eagCounter ++</span>
+<span class="cstat-no" title="statement not covered" >          continue</span>
+        }
+<span class="cstat-no" title="statement not covered" >        throw er</span>
+      }
+    }
+  }})(fs.readSync)
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function patchLchmod (fs) {</span>
+<span class="cstat-no" title="statement not covered" >  fs.lchmod = <span class="fstat-no" title="function not covered" >function (path, mode, callback) {</span></span>
+<span class="cstat-no" title="statement not covered" >    callback = callback || noop</span>
+<span class="cstat-no" title="statement not covered" >    fs.open( path</span>
+           , constants.O_WRONLY | constants.O_SYMLINK
+           , mode
+           , <span class="fstat-no" title="function not covered" >function (err, fd) {</span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        callback(err)</span>
+<span class="cstat-no" title="statement not covered" >        return</span>
+      }
+      // prefer to return the chmod error, if one occurs,
+      // but still try to close, and report closing errors if they occur.
+<span class="cstat-no" title="statement not covered" >      fs.fchmod(fd, mode, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >        fs.close(fd, <span class="fstat-no" title="function not covered" >function(err2) {</span></span>
+<span class="cstat-no" title="statement not covered" >          callback(err || err2)</span>
+        })
+      })
+    })
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  fs.lchmodSync = <span class="fstat-no" title="function not covered" >function (path, mode) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var fd = fs.openSync(path, constants.O_WRONLY | constants.O_SYMLINK, mode)</span>
+&nbsp;
+    // prefer to return the chmod error, if one occurs,
+    // but still try to close, and report closing errors if they occur.
+<span class="cstat-no" title="statement not covered" >    var threw = true</span>
+<span class="cstat-no" title="statement not covered" >    var ret</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      ret = fs.fchmodSync(fd, mode)</span>
+<span class="cstat-no" title="statement not covered" >      threw = false</span>
+    } finally {
+<span class="cstat-no" title="statement not covered" >      if (threw) {</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >          fs.closeSync(fd)</span>
+        } catch (er) {}
+      } else {
+<span class="cstat-no" title="statement not covered" >        fs.closeSync(fd)</span>
+      }
+    }
+<span class="cstat-no" title="statement not covered" >    return ret</span>
+  }
+}
+&nbsp;
+function patchLutimes (fs) {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (constants.hasOwnProperty("O_SYMLINK")) {
+    fs.lutimes = <span class="fstat-no" title="function not covered" >function (path, at, mt, cb) {</span>
+<span class="cstat-no" title="statement not covered" >      fs.open(path, constants.O_SYMLINK, <span class="fstat-no" title="function not covered" >function (er, fd) {</span></span>
+<span class="cstat-no" title="statement not covered" >        cb = cb || noop</span>
+<span class="cstat-no" title="statement not covered" >        if (er) <span class="cstat-no" title="statement not covered" >return cb(er)</span></span>
+<span class="cstat-no" title="statement not covered" >        fs.futimes(fd, at, mt, <span class="fstat-no" title="function not covered" >function (er) {</span></span>
+<span class="cstat-no" title="statement not covered" >          fs.close(fd, <span class="fstat-no" title="function not covered" >function (er2) {</span></span>
+<span class="cstat-no" title="statement not covered" >            return cb(er || er2)</span>
+          })
+        })
+      })
+    }
+&nbsp;
+    fs.lutimesSync = <span class="fstat-no" title="function not covered" >function (path, at, mt) {</span>
+<span class="cstat-no" title="statement not covered" >      var fd = fs.openSync(path, constants.O_SYMLINK)</span>
+<span class="cstat-no" title="statement not covered" >      var ret</span>
+<span class="cstat-no" title="statement not covered" >      var threw = true</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered" >        ret = fs.futimesSync(fd, at, mt)</span>
+<span class="cstat-no" title="statement not covered" >        threw = false</span>
+      } finally {
+<span class="cstat-no" title="statement not covered" >        if (threw) {</span>
+<span class="cstat-no" title="statement not covered" >          try {</span>
+<span class="cstat-no" title="statement not covered" >            fs.closeSync(fd)</span>
+          } catch (er) {}
+        } else {
+<span class="cstat-no" title="statement not covered" >          fs.closeSync(fd)</span>
+        }
+      }
+<span class="cstat-no" title="statement not covered" >      return ret</span>
+    }
+&nbsp;
+  } else {
+<span class="cstat-no" title="statement not covered" >    fs.lutimes = <span class="fstat-no" title="function not covered" >function (_a, _b, _c, cb) {</span> <span class="cstat-no" title="statement not covered" >process.nextTick(cb) }</span></span>
+<span class="cstat-no" title="statement not covered" >    fs.lutimesSync = <span class="fstat-no" title="function not covered" >function () {</span>}</span>
+  }
+}
+&nbsp;
+function chownFix (orig) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!orig) <span class="cstat-no" title="statement not covered" >return orig</span>
+  return <span class="fstat-no" title="function not covered" >function (target, uid, gid, cb) {</span>
+<span class="cstat-no" title="statement not covered" >    return orig.call(fs, target, uid, gid, <span class="fstat-no" title="function not covered" >function (er, res) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (chownErOk(er)) <span class="cstat-no" title="statement not covered" >er = null</span></span>
+<span class="cstat-no" title="statement not covered" >      cb(er, res)</span>
+    })
+  }
+}
+&nbsp;
+function chownFixSync (orig) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!orig) <span class="cstat-no" title="statement not covered" >return orig</span>
+  return <span class="fstat-no" title="function not covered" >function (target, uid, gid) {</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      return orig.call(fs, target, uid, gid)</span>
+    } catch (er) {
+<span class="cstat-no" title="statement not covered" >      if (!chownErOk(er)) <span class="cstat-no" title="statement not covered" >throw er</span></span>
+    }
+  }
+}
+&nbsp;
+// ENOSYS means that the fs doesn't support the op. Just ignore
+// that, because it doesn't matter.
+//
+// if there's no getuid, or if getuid() is something other
+// than 0, and the error is EINVAL or EPERM, then just ignore
+// it.
+//
+// This specific case is a silent failure in cp, install, tar,
+// and most other unix tools that manage permissions.
+//
+// When running as root, or if other types of errors are
+// encountered, then it's strict.
+<span class="fstat-no" title="function not covered" >function chownErOk (er) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!er)</span>
+<span class="cstat-no" title="statement not covered" >    return true</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (er.code === "ENOSYS")</span>
+<span class="cstat-no" title="statement not covered" >    return true</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var nonroot = !process.getuid || process.getuid() !== 0</span>
+<span class="cstat-no" title="statement not covered" >  if (nonroot) {</span>
+<span class="cstat-no" title="statement not covered" >    if (er.code === "EINVAL" || er.code === "EPERM")</span>
+<span class="cstat-no" title="statement not covered" >      return true</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return false</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Feb 02 2016 13:41:10 GMT-0800 (PST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

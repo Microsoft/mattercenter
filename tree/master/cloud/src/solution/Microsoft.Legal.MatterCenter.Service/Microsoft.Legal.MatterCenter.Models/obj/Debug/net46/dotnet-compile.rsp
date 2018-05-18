@@ -1,0 +1,124 @@
+--temp-output:e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\obj\Debug\net46\
+--out:e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\bin\Debug\net46\Microsoft.Legal.MatterCenter.Models.dll
+--define:DEBUG
+--define:TRACE
+--define:NET46
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--optimize:False
+--output-name:Microsoft.Legal.MatterCenter.Models
+--file-version:1.0.0.0
+--version:1.0.0.0
+--informational-version:1.0.0
+--target-framework:.NETFramework,Version=v4.6
+--reference:C:\Users\wilg\.nuget\packages\Microsoft.Azure.KeyVault.Core\1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll
+--reference:C:\Users\wilg\.nuget\packages\Microsoft.Data.Edm\5.6.4\lib\net40\Microsoft.Data.Edm.dll
+--reference:C:\Users\wilg\.nuget\packages\Microsoft.Data.OData\5.6.4\lib\net40\Microsoft.Data.OData.dll
+--reference:C:\Users\wilg\.nuget\packages\Microsoft.Data.Services.Client\5.6.4\lib\net40\Microsoft.Data.Services.Client.dll
+--reference:C:\Users\wilg\.nuget\packages\Microsoft.Win32.Primitives\4.0.1\ref\net46\Microsoft.Win32.Primitives.dll
+--reference:C:\Users\wilg\.nuget\packages\Newtonsoft.Json\6.0.8\lib\net45\Newtonsoft.Json.dll
+--reference:C:\Users\wilg\.nuget\packages\System.AppContext\4.1.0\ref\net46\System.AppContext.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Collections.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Collections.Concurrent.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Console\4.0.0\ref\net46\System.Console.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Diagnostics.Debug.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Diagnostics.Tools.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Diagnostics.Tracing.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Globalization.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Globalization.Calendars\4.0.1\ref\net46\System.Globalization.Calendars.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.IO.dll
+--reference:C:\Users\wilg\.nuget\packages\System.IO.Compression\4.1.0\ref\net46\System.IO.Compression.dll
+--reference:C:\Users\wilg\.nuget\packages\System.IO.Compression.ZipFile\4.0.1\ref\net46\System.IO.Compression.ZipFile.dll
+--reference:C:\Users\wilg\.nuget\packages\System.IO.FileSystem\4.0.1\ref\net46\System.IO.FileSystem.dll
+--reference:C:\Users\wilg\.nuget\packages\System.IO.FileSystem.Primitives\4.0.1\ref\net46\System.IO.FileSystem.Primitives.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Linq.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Linq.Expressions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Net.Primitives.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Net.Sockets\4.1.0\ref\net46\System.Net.Sockets.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.ObjectModel.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Reflection.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Reflection.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Reflection.Primitives.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Resources.ResourceManager.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Runtime.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Runtime.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Runtime.Handles.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Runtime.InteropServices.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.0.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Runtime.Numerics.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Security.Cryptography.Algorithms\4.2.0\ref\net46\System.Security.Cryptography.Algorithms.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Security.Cryptography.Encoding\4.0.0\ref\net46\System.Security.Cryptography.Encoding.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Security.Cryptography.Primitives\4.0.0\ref\net46\System.Security.Cryptography.Primitives.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Security.Cryptography.X509Certificates\4.1.0\ref\net46\System.Security.Cryptography.X509Certificates.dll
+--reference:C:\Users\wilg\.nuget\packages\System.Spatial\5.6.4\lib\net40\System.Spatial.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Text.Encoding.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Text.Encoding.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Text.RegularExpressions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Threading.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Threading.Tasks.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Threading.Timer.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Xml.ReaderWriter.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Facades\System.Xml.XDocument.dll
+--reference:C:\Users\wilg\.nuget\packages\WindowsAzure.Storage\7.0.1-preview\lib\net40\Microsoft.WindowsAzure.Storage.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Microsoft.CSharp.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.IO.Compression.FileSystem.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Net.Http.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Data.dll
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Client.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\GenericResponseVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Attachment\AttachmentDetails.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Attachment\AttachmentRequestVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Attachment\ContentCheckDetails.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Attachment\MailMetaData.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Attachment\MailXPath.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Attachment\ServiceRequest.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Document\DocumentData.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Document\DuplicateDocument.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\EMail\MailAttachmentDetails.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Error\ErrorResponse.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\Conflict.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\ExternalSharingRequest.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\FolderData.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\ListInformation.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\Matter.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterConfigurations.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterData.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterDetails.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterInformationVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterMetadata.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterMetdataVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterProvisionFlags.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterRevertList.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterStampedDetails.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\MatterVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\Role.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Matter\VersioningInfo.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Properties\AssemblyInfo.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\DateFilterObject.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\EntityData.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\FilterObject.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\PeoplePickerUser.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\PinRequestDocumentVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\PinRequestMatterVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\PinUnPinDetails.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\SearchObject.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\SearchRequestVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\SearchResponseVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Search\SortObject.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Shared\ContextHelpData.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Shared\ContextHelpSection.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Shared\HelpRequestModel.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\AreaTerm.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\ClientTermSets.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\ManagedColumn.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\PracticeGroupTerm.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\SubAreaTerm.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\TaxonomyResponseVM.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\TermSets.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\TermStoreDetails.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Taxonomy\TermStoreViewModel.cs
+e:\mc\tree\master\cloud\src\solution\Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Users\Users.cs

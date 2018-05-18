@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for graceful-fs.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">__root__/</a> graceful-fs.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.62% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>125/157</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">48.1% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>38/79</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">82.35% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>28/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.62% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>125/157</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254</td><td class="line-coverage quiet"><span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">35225×</span>
+<span class="cline-any cline-yes">35225×</span>
+<span class="cline-any cline-yes">35225×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35225×</span>
+<span class="cline-any cline-yes">35225×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8788×</span>
+<span class="cline-any cline-yes">8788×</span>
+<span class="cline-any cline-yes">8788×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16388×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16388×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">16388×</span>
+<span class="cline-any cline-yes">16388×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16388×</span>
+<span class="cline-any cline-yes">16388×</span>
+<span class="cline-any cline-yes">16388×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">8194×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">33178×</span>
+<span class="cline-any cline-yes">12693×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33178×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">34202×</span>
+<span class="cline-any cline-yes">34202×</span>
+<span class="cline-any cline-yes">1024×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33178×</span>
+<span class="cline-any cline-yes">33178×</span>
+<span class="cline-any cline-yes">33178×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">1024×</span>
+<span class="cline-any cline-yes">1024×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">101775×</span>
+<span class="cline-any cline-yes">101775×</span>
+<span class="cline-any cline-yes">1024×</span>
+<span class="cline-any cline-yes">1024×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var fs = require('fs')
+var polyfills = require('./polyfills.js')
+var legacy = require('./legacy-streams.js')
+var queue = []
+&nbsp;
+var util = require('util')
+&nbsp;
+<span class="fstat-no" title="function not covered" >function noop () {</span>}
+&nbsp;
+var debug = noop
+<span class="missing-if-branch" title="else path not taken" >E</span>if (util.debuglog)
+  debug = util.debuglog('gfs4')
+else <span class="cstat-no" title="statement not covered" >if (/\bgfs4\b/i.test(process.env.NODE_DEBUG || ''))</span>
+<span class="cstat-no" title="statement not covered" >  debug = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >    var m = util.format.apply(util, arguments)</span>
+<span class="cstat-no" title="statement not covered" >    m = 'GFS4: ' + m.split(/\n/).join('\nGFS4: ')</span>
+<span class="cstat-no" title="statement not covered" >    console.error(m)</span>
+  }
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (/\bgfs4\b/i.test(process.env.NODE_DEBUG || '')) {
+<span class="cstat-no" title="statement not covered" >  process.on('exit', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >    debug(queue)</span>
+<span class="cstat-no" title="statement not covered" >    require('assert').equal(queue.length, 0)</span>
+  })
+}
+&nbsp;
+module.exports = patch(require('./fs.js'))
+if (process.env.TEST_GRACEFUL_FS_GLOBAL_PATCH) {
+  module.exports = patch(fs)
+}
+&nbsp;
+// Always patch fs.close/closeSync, because we want to
+// retry() whenever a close happens *anywhere* in the program.
+// This is essential when multiple graceful-fs instances are
+// in play at the same time.
+module.exports.close =
+fs.close = (function (fs$close) { return function (fd, cb) {
+  return fs$close.call(fs, fd, function (err) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!err)
+      retry()
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof cb === 'function')
+      cb.apply(this, arguments)
+  })
+}})(fs.close)
+&nbsp;
+module.exports.closeSync =
+fs.closeSync = (function (fs$closeSync) { return function (fd) {
+  // Note that graceful-fs also retries when fs.closeSync() fails.
+  // Looks like a bug to me, although it's probably a harmless one.
+  var rval = fs$closeSync.apply(fs, arguments)
+  retry()
+  return rval
+}})(fs.closeSync)
+&nbsp;
+function patch (fs) {
+  // Everything that references the open() function needs to be in here
+  polyfills(fs)
+  fs.gracefulify = patch
+  fs.FileReadStream = ReadStream;  // Legacy name.
+  fs.FileWriteStream = WriteStream;  // Legacy name.
+  fs.createReadStream = createReadStream
+  fs.createWriteStream = createWriteStream
+  var fs$readFile = fs.readFile
+  fs.readFile = readFile
+  function readFile (path, options, cb) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof options === 'function')
+<span class="cstat-no" title="statement not covered" >      cb = options, options = null</span>
+&nbsp;
+    return go$readFile(path, options, cb)
+&nbsp;
+    function go$readFile (path, options, cb) {
+      return fs$readFile(path, options, function (err) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (err &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >err.code === 'EMFILE' </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >err.code === 'ENFILE')</span>)
+<span class="cstat-no" title="statement not covered" >          enqueue([go$readFile, [path, options, cb]])</span>
+        else {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof cb === 'function')
+            cb.apply(this, arguments)
+          retry()
+        }
+      })
+    }
+  }
+&nbsp;
+  var fs$writeFile = fs.writeFile
+  fs.writeFile = writeFile
+  function writeFile (path, data, options, cb) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof options === 'function')
+<span class="cstat-no" title="statement not covered" >      cb = options, options = null</span>
+&nbsp;
+    return go$writeFile(path, data, options, cb)
+&nbsp;
+    function go$writeFile (path, data, options, cb) {
+      return fs$writeFile(path, data, options, function (err) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (err &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >err.code === 'EMFILE' </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >err.code === 'ENFILE')</span>)
+<span class="cstat-no" title="statement not covered" >          enqueue([go$writeFile, [path, data, options, cb]])</span>
+        else {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof cb === 'function')
+            cb.apply(this, arguments)
+          retry()
+        }
+      })
+    }
+  }
+&nbsp;
+  var fs$appendFile = fs.appendFile
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (fs$appendFile)
+    fs.appendFile = appendFile
+<span class="fstat-no" title="function not covered" >  function appendFile (path, data, options, cb) {</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof options === 'function')</span>
+<span class="cstat-no" title="statement not covered" >      cb = options, options = null</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return go$appendFile(path, data, options, cb)</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function go$appendFile (path, data, options, cb) {</span>
+<span class="cstat-no" title="statement not covered" >      return fs$appendFile(path, data, options, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (err &amp;&amp; (err.code === 'EMFILE' || err.code === 'ENFILE'))</span>
+<span class="cstat-no" title="statement not covered" >          enqueue([go$appendFile, [path, data, options, cb]])</span>
+        else {
+<span class="cstat-no" title="statement not covered" >          if (typeof cb === 'function')</span>
+<span class="cstat-no" title="statement not covered" >            cb.apply(this, arguments)</span>
+<span class="cstat-no" title="statement not covered" >          retry()</span>
+        }
+      })
+    }
+  }
+&nbsp;
+  var fs$readdir = fs.readdir
+  fs.readdir = readdir
+  function readdir (path, cb) {
+    return go$readdir(path, cb)
+&nbsp;
+    function go$readdir () {
+      return fs$readdir(path, function (err, files) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (files &amp;&amp; files.sort)
+          files.sort();  // Backwards compatibility with graceful-fs.
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (err &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >err.code === 'EMFILE' </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >err.code === 'ENFILE')</span>)
+<span class="cstat-no" title="statement not covered" >          enqueue([go$readdir, [path, cb]])</span>
+        else {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof cb === 'function')
+            cb.apply(this, arguments)
+          retry()
+        }
+      })
+    }
+  }
+&nbsp;
+&nbsp;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (process.version.substr(0, 4) === 'v0.8') {
+<span class="cstat-no" title="statement not covered" >    var legStreams = legacy(fs)</span>
+<span class="cstat-no" title="statement not covered" >    ReadStream = legStreams.ReadStream</span>
+<span class="cstat-no" title="statement not covered" >    WriteStream = legStreams.WriteStream</span>
+  }
+&nbsp;
+  var fs$ReadStream = fs.ReadStream
+  ReadStream.prototype = Object.create(fs$ReadStream.prototype)
+  ReadStream.prototype.open = ReadStream$open
+&nbsp;
+  var fs$WriteStream = fs.WriteStream
+  WriteStream.prototype = Object.create(fs$WriteStream.prototype)
+  WriteStream.prototype.open = WriteStream$open
+&nbsp;
+  fs.ReadStream = ReadStream
+  fs.WriteStream = WriteStream
+&nbsp;
+  function ReadStream (path, options) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this instanceof ReadStream)
+      return fs$ReadStream.apply(this, arguments), this
+    else
+<span class="cstat-no" title="statement not covered" >      return ReadStream.apply(Object.create(ReadStream.prototype), arguments)</span>
+  }
+&nbsp;
+  function ReadStream$open () {
+    var that = this
+    open(that.path, that.flags, that.mode, function (err, fd) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (err) {
+<span class="cstat-no" title="statement not covered" >        if (that.autoClose)</span>
+<span class="cstat-no" title="statement not covered" >          that.destroy()</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        that.emit('error', err)</span>
+      } else {
+        that.fd = fd
+        that.emit('open', fd)
+        that.read()
+      }
+    })
+  }
+&nbsp;
+  function WriteStream (path, options) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this instanceof WriteStream)
+      return fs$WriteStream.apply(this, arguments), this
+    else
+<span class="cstat-no" title="statement not covered" >      return WriteStream.apply(Object.create(WriteStream.prototype), arguments)</span>
+  }
+&nbsp;
+  function WriteStream$open () {
+    var that = this
+    open(that.path, that.flags, that.mode, function (err, fd) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (err) {
+<span class="cstat-no" title="statement not covered" >        that.destroy()</span>
+<span class="cstat-no" title="statement not covered" >        that.emit('error', err)</span>
+      } else {
+        that.fd = fd
+        that.emit('open', fd)
+      }
+    })
+  }
+&nbsp;
+  function createReadStream (path, options) {
+    return new ReadStream(path, options)
+  }
+&nbsp;
+  function createWriteStream (path, options) {
+    return new WriteStream(path, options)
+  }
+&nbsp;
+  var fs$open = fs.open
+  fs.open = open
+  function open (path, flags, mode, cb) {
+    if (typeof mode === 'function')
+      cb = mode, mode = null
+&nbsp;
+    return go$open(path, flags, mode, cb)
+&nbsp;
+    function go$open (path, flags, mode, cb) {
+      return fs$open(path, flags, mode, function (err, fd) {
+        if (err &amp;&amp; (err.code === 'EMFILE' || err.code === 'ENFILE'))
+          enqueue([go$open, [path, flags, mode, cb]])
+        else {
+          <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof cb === 'function')
+            cb.apply(this, arguments)
+          retry()
+        }
+      })
+    }
+  }
+&nbsp;
+  return fs
+}
+&nbsp;
+function enqueue (elem) {
+  debug('ENQUEUE', elem[0].name, elem[1])
+  queue.push(elem)
+}
+&nbsp;
+function retry () {
+  var elem = queue.shift()
+  if (elem) {
+    debug('RETRY', elem[0].name, elem[1])
+    elem[0].apply(null, elem[1])
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Feb 02 2016 13:41:10 GMT-0800 (PST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
