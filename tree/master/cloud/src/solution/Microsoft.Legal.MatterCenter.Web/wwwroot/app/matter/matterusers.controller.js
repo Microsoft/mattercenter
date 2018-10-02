@@ -283,7 +283,7 @@
                 }
 
                 assignedTeam.assignedUser = userNameValue + "(" + userEmailValue + ");";
-                assignedTeam.userExsists = true; assignedTeam.userConfirmation = true;
+                assignedTeam.userExists = true; assignedTeam.userConfirmation = true;
                 if (-1 == cm.oSiteUsers.indexOf(userEmailValue)) {
                     cm.oSiteUsers.push(userEmailValue);
                 }
@@ -312,7 +312,7 @@
                 assignedTeam.teamUsers = [];
                 var teamuser = {};
                 teamuser.userName = userEmailValue;
-                teamuser.userExsists = true;
+                teamuser.userExists = true;
                 teamuser.userConfirmation = true;
                 assignedTeam.teamUsers.push(teamuser);
                 assignedTeam.userConfirmation = true;
@@ -674,7 +674,7 @@
                         }
                         else {
                             teamDetails.userConfirmation = teamDetails.userConfirmation;
-                            teamDetails.userExsists = false;
+                            teamDetails.userExists = false;
                             cm.invalidUserCheck = true;
                         }
 
@@ -682,24 +682,24 @@
                         checkEmailExists = true;
                     }
                     if (checkEmailExists) {
-                        var optionsForUserExsists = new Object;
-                        optionsForUserExsists = {
+                        var optionsForUserExists = new Object;
+                        optionsForUserExists = {
                             Url: cm.clientUrl,
                             Name: email
                         }
                         cm.popupContainerBackground = "show";
-                        userexists(optionsForUserExsists, function (response) {
+                        userexists(optionsForUserExists, function (response) {
                             if (!response.isUserExistsInSite) {
                                 angular.forEach(cm.assignPermissionTeams, function (team) {
                                     var userEmail = getUserName(team.assignedUser, false);
                                     for (var i = 0; i < userEmail.length; i++) {
                                         if (userEmail[i] == email && team.assigneTeamRowNumber == teamDetails.assigneTeamRowNumber) {
 
-                                            team.userExsists = response.isUserExistsInSite;
+                                            team.userExists = response.isUserExistsInSite;
                                             team.userConfirmation = false;
                                             var userDetails = {};
                                             userDetails.userName = userEmail[i];
-                                            userDetails.userExsists = team.userExsists;
+                                            userDetails.userExists = team.userExists;
                                             userDetails.userConfirmation = false;
                                             if (!team.teamUsers) {
                                                 team.teamUsers = [];
@@ -734,7 +734,7 @@
                                     for (var i = 0; i < userEmail.length; i++) {
                                         if (userEmail[i] == email) {
                                             cm.textInputUser = team;
-                                            team.userExsists = response.isUserExistsInSite;
+                                            team.userExists = response.isUserExistsInSite;
                                             team.userConfirmation = true;
                                             cm.currentExternalUser.userName = userEmail[i];
                                             cm.currentExternalUser.rowNumber = team.assigneTeamRowNumber;
@@ -749,7 +749,7 @@
                                             }
                                             var userDetails = {};
                                             userDetails.userName = userEmail[i];
-                                            userDetails.userExsists = team.userExsists;
+                                            userDetails.userExists = team.userExists;
                                             userDetails.userConfirmation = true;
                                             if (!team.teamUsers) {
                                                 team.teamUsers = [];
@@ -966,7 +966,7 @@
                 var userEmail = email;
                 angular.forEach(team.teamUsers, function (teamUser) {
                     if (teamUser.userName == userEmail) {
-                        userNamesStatus.push(teamUser.userExsists);
+                        userNamesStatus.push(teamUser.userExists);
                     }
                 });
             });
@@ -1288,12 +1288,12 @@
                     var userEmailTxt = "";
                     var userNames = getUserName($label.assignedUser, true);
                     var userEmails = getUserName($label.assignedUser, false);
-                    var exsistingTeams = [];
+                    var existingTeams = [];
                     for (var i = 0; i < userEmails.length; i++) {
                         if (userEmails[i] != "" && validateEmail(userEmails[i])) {
                             angular.forEach($label.teamUsers, function (team) {
                                 if (team.userName == userEmails[i]) {
-                                    exsistingTeams.push(team);
+                                    existingTeams.push(team);
                                 }
                             });
                             var userNameAndEmailTxt = (userNames[i] == userEmails[i]) ? userEmails[i] : userNames[i] + "(" + userEmails[i] + ")";
@@ -1301,7 +1301,7 @@
                         }
                     }
                     $label.assignedAllUserNamesAndEmails = userEmailTxt;
-                    $label.teamUsers = exsistingTeams;
+                    $label.teamUsers = existingTeams;
                 }
                 if (fucnValue == "on-blurr") {
                     if (typeheadelelen == 0 && noresults) {
@@ -1331,7 +1331,7 @@
                         angular.forEach(cm.textInputUser.teamUsers, function (teamUser) {
                             if (teamUser.userName == userEmail[i]) {
                                 teamUser.userConfirmation = true;
-                                teamUser.userExsists = teamUser.userExsists;
+                                teamUser.userExists = teamUser.userExists;
                             }
                         });
                     }
@@ -1359,7 +1359,7 @@
                     }
                 }
                 cm.textInputUser.assignedUser = updatedUserEmail;
-                cm.textInputUser.userExsists = false;
+                cm.textInputUser.userExists = false;
                 cm.textInputUser.userConfirmation = false;
                 cm.notificationBorder = "";
             }
@@ -1476,7 +1476,7 @@
                                 angular.forEach(team.teamUsers, function (teamUser) {
                                     if (keepGoing) {
                                         if (teamUser.userName == usersEmails[j]) {
-                                            if (teamUser.userExsists) {
+                                            if (teamUser.userExists) {
                                                 if (-1 == cm.oSiteUsers.indexOf(usersEmails[j]) || -1 == cm.oSiteUserNames.indexOf(usersAliasNames[j])) {
                                                     cm.errTextMsg = cm.createContent.ErrorMessageEntityUsers1;
                                                     // cm.errTextMsg = "Please enter valid team members.";
@@ -2370,7 +2370,7 @@
                         angular.forEach(team.teamUsers, function (teamUser) {
                             if (keepGoing) {
                                 if (teamUser.userName == usersEmails[j]) {
-                                    if (teamUser.userExsists) {
+                                    if (teamUser.userExists) {
                                         if (-1 == cm.oSiteUsers.indexOf(usersEmails[j]) || -1 == cm.oSiteUserNames.indexOf(usersAliasNames[j])) {
                                             cm.errTextMsg = cm.createContent.ErrorMessageEntityUsers1;
                                             cm.errorBorder = "";

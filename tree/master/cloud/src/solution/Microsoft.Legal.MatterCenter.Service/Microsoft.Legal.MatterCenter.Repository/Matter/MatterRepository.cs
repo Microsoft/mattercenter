@@ -277,7 +277,7 @@ namespace Microsoft.Legal.MatterCenter.Repository
                 string originalMatterName = GetMatterName(clientContext, matter.Name);
                 listItemId = RetrieveItemId(clientContext, matterSettings.MatterLandingPageRepositoryName, originalMatterName);
                 List<string> usersToRemove = new List<string>();
-                List<string> exsistingUsers = RetrieveMatterUsers(userPermissionOnLibrary);
+                List<string> existingUsers = RetrieveMatterUsers(userPermissionOnLibrary);
                 foreach (IList<string> removedUsers in matterInformation.UsersNamesToRemove)
                 {
                     foreach (var removedUser in removedUsers)

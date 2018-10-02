@@ -478,17 +478,17 @@
                     scope.$apply(function () {
                         scope.assignTeam.assignedAllUserNamesAndEmails = scope.assignTeam.assignedUser;
                         var userEmails = getUserName(scope.assignTeam.assignedUser, false);
-                        var exsistingTeams = [];
+                        var existingTeams = [];
                         for (var i = 0; i < userEmails.length; i++) {
                             if (userEmails[i] != "") {
                                 angular.forEach(scope.assignTeam.teamUsers, function (team) {
                                     if (team.userName == userEmails[i]) {
-                                        exsistingTeams.push(team);
+                                        existingTeams.push(team);
                                     }
                                 });
                             }
                         }
-                        scope.assignTeam.teamUsers = exsistingTeams;
+                        scope.assignTeam.teamUsers = existingTeams;
                         // $scope.projects.splice(i, 1);
                         scope.$parent.cm.errorPopUpBlock = false;
                         scope.$parent.cm.errorBorder = "";
