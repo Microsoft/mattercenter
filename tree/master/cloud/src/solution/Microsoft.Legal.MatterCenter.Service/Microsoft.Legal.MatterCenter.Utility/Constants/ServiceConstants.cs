@@ -229,12 +229,12 @@ namespace Microsoft.Legal.MatterCenter.Utility
         /// <summary>
         /// Constant required for document library filter condition
         /// </summary>
-        public const string DOCUMENT_LIBRARY_FILTER_CONDITION = "contentclass:STS_List_DocumentLibrary";
+        public const string DOCUMENT_LIBRARY_FILTER_CONDITION = "or(contentclass:STS_ListItem_DocumentLibrary,contentclass:STS_View)";
 
         /// <summary>
         /// Constant required for document item filter condition
         /// </summary>
-        public const string DOCUMENT_ITEM_FILTER_CONDITION = "contentclass:STS_ListItem_DocumentLibrary";
+        public const string DOCUMENT_ITEM_FILTER_CONDITION = "or(contentclass:STS_ListItem_DocumentLibrary,contentclass:STS_View)";
 
         /// <summary>
         /// Open square brace
