@@ -85,20 +85,20 @@ namespace Microsoft.Legal.MatterCenter.Jobs
             var values = kv.GetSecretsAsync(this.Configuration.GetSection("General").GetSection("KeyVaultURI").Value.ToString()).GetAwaiter().GetResult();
 
 
-            if (values != null && values.Value != null)
+            if (values != null)
             {
 
-                foreach (var m in values.Value)
+                foreach (var m in values)
                     secrets.Add(m.Identifier.Name);
             }
 
-            while (values != null && !string.IsNullOrWhiteSpace(values.NextLink))
+            while (values != null && !string.IsNullOrWhiteSpace(values.NextPageLink))
             {
-                values = kv.GetSecretsNextAsync(values.NextLink).GetAwaiter().GetResult();
-                if (values != null && values.Value != null)
+                values = kv.GetSecretsNextAsync(values.NextPageLink).GetAwaiter().GetResult();
+                if (values != null)
                 {
 
-                    foreach (var m in values.Value)
+                    foreach (var m in values)
                         secrets.Add(m.Identifier.Name);
                 }
             }

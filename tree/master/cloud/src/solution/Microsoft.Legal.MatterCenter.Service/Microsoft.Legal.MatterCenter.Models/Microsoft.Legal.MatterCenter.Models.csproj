@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net46</TargetFramework>
+    <AssemblyName>Microsoft.Legal.MatterCenter.Models</AssemblyName>
+    <PackageId>Microsoft.Legal.MatterCenter.Models</PackageId>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WindowsAzure.Storage" Version="7.2.1" />
+    <PackageReference Include="Microsoft.Graph" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>

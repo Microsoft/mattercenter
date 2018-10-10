@@ -1,31 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Legal.MatterCenter.Repository", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Repository\Microsoft.Legal.MatterCenter.Repository.xproj", "{636BC580-B03A-4523-B3CA-ECB24596560D}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Legal.MatterCenter.Models", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Microsoft.Legal.MatterCenter.Models.xproj", "{D1EFE912-64CE-40E6-86F7-01E39CC30893}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Legal.MatterCenter.Utility", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Utility\Microsoft.Legal.MatterCenter.Utility.xproj", "{C72CAA85-CA6A-4540-AA43-56A4FB2B3EFE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86D26D6E-2C06-4E6F-804B-4A4C540591D4}"
 	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
 		Local.testsettings = Local.testsettings
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Legal.MatterCenter.Repository", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Repository\Microsoft.Legal.MatterCenter.Repository.csproj", "{636BC580-B03A-4523-B3CA-ECB24596560D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Legal.MatterCenter.Models", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Models\Microsoft.Legal.MatterCenter.Models.csproj", "{D1EFE912-64CE-40E6-86F7-01E39CC30893}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Legal.MatterCenter.Utility", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.Utility\Microsoft.Legal.MatterCenter.Utility.csproj", "{C72CAA85-CA6A-4540-AA43-56A4FB2B3EFE}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Legal.MatterCenter_Outlook", "Microsoft.Legal.MatterCenter_Outlook\Microsoft.Legal.MatterCenter_Outlook.csproj", "{0AB1971C-0D57-4CD8-8E5A-1461DA018937}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Legal.MatterCenter.Jobs", "Microsoft.Legal.MatterCenter.Jobs\Microsoft.Legal.MatterCenter.Jobs.xproj", "{B32958BF-D498-4443-BE46-58594CDF29E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Legal.MatterCenter.Jobs", "Microsoft.Legal.MatterCenter.Jobs\Microsoft.Legal.MatterCenter.Jobs.csproj", "{B32958BF-D498-4443-BE46-58594CDF29E1}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Legal.MatterCenter.Web", "Microsoft.Legal.MatterCenter.Web\Microsoft.Legal.MatterCenter.Web.xproj", "{B6B6A216-BCFD-43F0-B326-E820EB4FC677}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Legal.MatterCenter.Web", "Microsoft.Legal.MatterCenter.Web\Microsoft.Legal.MatterCenter.Web.csproj", "{B6B6A216-BCFD-43F0-B326-E820EB4FC677}"
 EndProject
 Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "Deployment", "Deployment\Deployment.deployproj", "{AD4204FD-2F59-4A0C-868A-4A9A3C602DF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Legal.MatterCenter.Jasmine", "Microsoft.Legal.MatterCenter.Jasmine\Microsoft.Legal.MatterCenter.Jasmine.csproj", "{D6F8976C-1DC3-4106-B11E-5104B91DD9D5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.Legal.MatterCenter.ServiceTest", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.ServiceTest\Microsoft.Legal.MatterCenter.ServiceTest.xproj", "{650A5A85-5956-491E-9312-5E25A27D1108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Legal.MatterCenter.ServiceTest", "Microsoft.Legal.MatterCenter.Service\Microsoft.Legal.MatterCenter.ServiceTest\Microsoft.Legal.MatterCenter.ServiceTest.csproj", "{650A5A85-5956-491E-9312-5E25A27D1108}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Legal.MatterCenter_Office", "Microsoft.Legal.MatterCenter_Office\Microsoft.Legal.MatterCenter_Office.csproj", "{2DC47702-5909-4058-9023-93F99B26E283}"
 EndProject
@@ -207,5 +206,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48439A74-EC47-42C3-8A1F-377FC1A96910}
 	EndGlobalSection
 EndGlobal
